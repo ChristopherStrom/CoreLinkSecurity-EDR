@@ -13,6 +13,38 @@ CoreLinkSecurity-EDR is an open-source Endpoint Detection and Response (EDR) pla
 - **Extensible and Customizable**: Built with flexibility in mind, allowing users to extend and customize the platform to meet their specific needs.
 - **Open Source**: Community-driven development, ensuring transparency, collaboration, and continuous improvement.
 
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+- **Operating System**: Windows, macOS, or Linux
+- **.NET SDK**: .NET 6.0 or later
+- **Node.js and npm**: Node.js 14.x or later, npm 6.x or later
+- **Database**: SQL Server, MySQL, or PostgreSQL (choose one)
+- **Email Server**: SMTP server details for sending emails
+- **Web Browser**: Latest version of Chrome, Firefox, or Edge
+
+### Install .NET SDK
+
+Download and install the .NET SDK from the [official .NET website](https://dotnet.microsoft.com/download).
+
+### Install Node.js and npm
+
+Download and install Node.js and npm from the [official Node.js website](https://nodejs.org/).
+
+### Database Setup
+
+Set up your preferred database (SQL Server, MySQL, or PostgreSQL) and create a database for CoreLinkSecurity-EDR. Update the connection string in the `appsettings.json` file.
+
+## Getting Started
+
+To get started with CoreLinkSecurity-EDR, follow these steps:
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/ChristopherStrom/CoreLinkSecurity-EDR.git
+   cd CoreLinkSecurity-EDR
+
 ## Getting Started
 
 To get started with CoreLinkSecurity-EDR, TBD
