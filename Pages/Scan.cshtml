@@ -1,0 +1,96 @@
+﻿@page
+@model ScanModel
+@{
+    ViewData["Title"] = "Start a Sample Scan";
+}
+
+<section class="section">
+    <div class="container">
+        <h1 class="title">Start a Sample Scan</h1>
+
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="notification is-success">
+                @TempData["SuccessMessage"]
+            </div>
+        }
+
+        <div id="spinner" class="spinner is-hidden"></div>
+
+        <form method="post" onsubmit="showSpinner()">
+            <div class="field">
+                <label class="label">Scan Name</label>
+                <div class="control">
+                    <input class="input" type="text" name="ScanName" placeholder="Enter a name for the scan" required>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Target IP Address</label>
+                <div class="control">
+                    <input class="input" type="text" name="TargetIpAddress" placeholder="Enter the target IP address" required>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Email Address</label>
+                <div class="control">
+                    <input class="input" type="email" name="EmailAddress" placeholder="Enter your email address" required>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Scan Type</label>
+                <div class="control">
+                    <div class="select">
+                        <select name="ScanType" required>
+                            <option value="Full">Full Scan</option>
+                            <option value="Quick">Quick Scan</option>
+                            <option value="Custom">Custom Scan</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <button class="button is-primary" type="submit">Start Scan</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+@section Scripts {
+    <script>
+        function showSpinner() {
+            document.getElementById('spinner').classList.remove('is-hidden');
+        }
+    </script>
+    <style>
+        .spinner {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 50px;
+            height: 50px;
+            margin-top: -25px; /* Half the height */
+            margin-left: -25px; /* Half the width */
+            border: 8px solid rgba(0, 0, 0, 0.1);
+            border-left-color: #000;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            z-index: 1000;
+        }
+
+        .is-hidden {
+            display: none;
+        }
+
+        @@keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+}

@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CoreLink Security</title>
+    <link rel="stylesheet" href="~/lib/bulma/css/bulma.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    CoreLink Security
+                </h1>
+                <h2 class="subtitle">
+                    Your trusted partner in Endpoint Detection and Response
+                </h2>
+            </div>
+        </div>
+    </section>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="/">
+                <strong>CoreLink Security</strong>
+            </a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" asp-page="/Index">Home</a>
+                <a class="navbar-item" asp-page="/About">About</a>
+                <a class="navbar-item" asp-page="/Contact">Contact</a>
+                <a class="navbar-item" asp-page="/Pricing">Pricing</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <main role="main" class="section">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                &copy; 2024 - CoreLink Security - <a asp-page="/Privacy">Privacy</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
