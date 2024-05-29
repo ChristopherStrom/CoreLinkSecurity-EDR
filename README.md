@@ -41,13 +41,41 @@ Set up your preferred database (SQL Server, MySQL, or PostgreSQL) and create a d
 To get started with CoreLinkSecurity-EDR, follow these steps:
 
 1. Clone the repository:
-   ```sh
+   \```sh
    git clone https://github.com/ChristopherStrom/CoreLinkSecurity-EDR.git
    cd CoreLinkSecurity-EDR
+   \```
 
-## Getting Started
+2. Install the required npm packages:
+   \```sh
+   npm install
+   \```
 
-To get started with CoreLinkSecurity-EDR, TBD
+3. Install the required NuGet packages:
+   \```sh
+   dotnet add package MailKit
+   dotnet add package MimeKit
+   \```
+
+4. Install the required front-end libraries:
+   \```sh
+   npm install bulma
+   npm install bootstrap jquery @popperjs/core
+   \```
+
+5. Build the project:
+   \```sh
+   dotnet build
+   \```
+
+6. Update the `appsettings.json` file with your database connection string and email server details.
+
+7. Run the application:
+   \```sh
+   dotnet run
+   \```
+
+8. Open your web browser and navigate to `http://localhost:5000`.
 
 ## Contributing
 
